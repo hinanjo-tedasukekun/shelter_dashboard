@@ -41,6 +41,7 @@ STATUS_TO_VALUE = {
 }
 
 service = {
+  'Web アプリケーション' => ShelterService.new('refugee-webapp'),
   '入力端末用サーバー' => ShelterService.new('refugee-input-server'),
   '無線通信用サーバー' => ShelterService.new('refugee-com-server'),
   '表示器用サーバー' => ShelterService.new('refugee-display-server')
@@ -59,7 +60,7 @@ def webapp_status
 end
 
 SCHEDULER.every '1s', :first_in => 0 do |job|
-  items = [webapp_status] + service.map do |label, s|
+  items = service.map do |label, s|
     s.update_status!
     { label: label, value: STATUS_TO_VALUE[s.status] }
   end
