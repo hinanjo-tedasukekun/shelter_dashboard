@@ -35,9 +35,9 @@ class ShelterService
 end
 
 STATUS_TO_VALUE = {
-  active: '動作中',
-  failed: '異常終了',
-  stopped: '停止中'
+  active: '<span class="service-active">動作中</span>',
+  failed: '<span class="service-failed">異常終了</span>',
+  stopped: '<span class="service-stopped">停止中</span>'
 }
 
 service = {

@@ -8,6 +8,10 @@ $title-color:       rgba(255, 255, 255, 0.7);
 $label-color:       rgba(255, 255, 255, 0.7);
 $moreinfo-color:    rgba(255, 255, 255, 0.7);
 
+$service-active-color: #E7EA73;
+$service-failed-color: #FF9866;
+$service-stopped-color: white;
+
 // ----------------------------------------------------------------------------
 // Widget-list styles
 // ----------------------------------------------------------------------------
@@ -57,4 +61,15 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     color: $moreinfo-color;
   }
 
+  .service-active {
+    color: $service-active-color;
+  }
+
+  .service-failed {
+    color: $service-failed-color;
+  }
+
+  .service-stopped {
+    color: $service-stopped-color;
+  }
 }
